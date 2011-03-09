@@ -2,7 +2,8 @@ import java.util.Arrays;
 import java.util.Random;
 
 /**
- * The problem is: write a program to do a binary search in a sorted list, but the list is circularly shifted by an unknown amount.
+ * The problem is: write a program to do a binary search in a sorted list, but the list is circularly shifted by
+ * an unknown amount.
  *
  * The solution below uses an int array for simplicity. The complexity is O(log n), like the normal binary search.
  */
