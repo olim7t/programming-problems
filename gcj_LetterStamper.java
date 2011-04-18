@@ -34,8 +34,7 @@ public final class LetterStamper {
       results.add(executor.submit(task));
     }
     executor.shutdown();
-    for (Future<String> result : results)
-      out.println(result.get());
+    for (Future<String> result : results) out.println(result.get());
   }
 
 
@@ -54,8 +53,7 @@ public final class LetterStamper {
       char grades[] = input.toCharArray();
       int best;
       Stacks stacks = new Stacks(grades);
-      if (stacks.size == 1)
-        best = grades.length + 2;
+      if (stacks.size == 1) best = grades.length + 2;
       else {
         for (int i = 0; i <= grades.length; i++)
           for (int s = 0; s < stacks.size; s++) currentRow[pos(i, s)] = i;
@@ -70,8 +68,7 @@ public final class LetterStamper {
               char onTop = stacks.elementAt(s, i);
               char canPush = stacks.elementAt(s, i + 1);
               int result;
-              if (toPrint == onTop)
-                result = previousRow[pos(i, s)] + 1;
+              if (toPrint == onTop) result = previousRow[pos(i, s)] + 1;
               else {
                 int pop = worst;
                 if (i == 1)
@@ -138,8 +135,7 @@ public final class LetterStamper {
     }
 
     char elementAt(int s, int i) {
-      if (i < 1 || i > gradeCount || s >= size)
-        return 0;
+      if (i < 1 || i > gradeCount || s >= size) return 0;
       else {
         int p = (i - 1 + s) % elements.length;
         char[] target = s < 3 ? elements : elements2;
