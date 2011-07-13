@@ -9,4 +9,4 @@ File extension: language.
 * `*.java`: Java (1.6+).
 * `*.c`: C.
 * `*.rb`: Ruby (1.9+).
-
+* `*.hs`: Haskell.
